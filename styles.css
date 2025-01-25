@@ -20,7 +20,7 @@ main {
   width: 100%;
   height: 100%;
   max-width: 1250px;
-  color: #292a31;
+  color: #3b3e46;
   font-family: "Inter", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -178,16 +178,17 @@ section {
   display: inline-block;
   width: calc(100% - 350px);
   margin-left: 350px;
-  padding: 1.5rem;
+  padding-block: 1.5rem;
 
-  & div {
+  & .default-block {
     width: 100%;
     height: calc(350px - 2rem);
+    padding: 1.5rem;
     border-radius: 1rem;
-    background-image: linear-gradient(
-      12deg,
-      hsl(223, 68%, 53%),
-      hsl(264, 44%, 47%)
-    );
+    background-image: linear-gradient(to bottom, #dadfe4, white 200px);
+
+    & h2 {
+      text-align: center;
+    }
   }
 }
