@@ -114,6 +114,14 @@ a:not(.banner-link):after {
   background-size: contain;
 }
 
+ul {
+  margin-left: var(--spacing-03);
+
+  & li {
+    margin-block: 0.2rem;
+  }
+}
+
 small {
   color: var(--light-03);
   font-size: 0.75rem;
@@ -304,14 +312,6 @@ main {
     font-size: var(--title-01);
   }
 
-  & ul {
-    margin-left: var(--spacing-03);
-
-    & li {
-      margin-block: 0.2rem;
-    }
-  }
-
   & a {
     margin-top: var(--spacing-03);
   }
@@ -382,6 +382,52 @@ main {
   color: var(--dark-02);
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+#knowledge {
+  margin-top: var(--spacing-03);
+
+  & h2 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-01);
+    width: 100%;
+    padding-bottom: var(--spacing-03);
+    color: var(--light-03);
+    font-size: var(--text-02);
+    font-weight: 500;
+
+    & img {
+      height: var(--text-02);
+    }
+  }
+
+  p {
+    margin-bottom: var(--spacing-02);
+  }
+}
+
+#contact {
+  margin-top: var(--spacing-03);
+
+  & h2 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-01);
+    width: 100%;
+    padding-bottom: var(--spacing-03);
+    color: var(--light-03);
+    font-size: var(--text-02);
+    font-weight: 500;
+
+    & img {
+      height: var(--text-02);
+    }
+  }
+
+  p {
+    margin-bottom: var(--spacing-02);
+  }
 }
 
 footer {
