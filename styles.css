@@ -221,6 +221,7 @@ main {
 
 .project-block {
   position: relative;
+  border-bottom: 2px solid var(--dark-03);
 
   & .project-album {
     display: flex;
@@ -314,8 +315,9 @@ main {
   & .contributors-block {
     display: flex;
     align-items: center;
-    gap: var(--spacing-02);
+    gap: var(--spacing-01);
     padding-top: var(--spacing-02);
+    padding-bottom: var(--spacing-03);
 
     & div {
       position: relative;
@@ -329,7 +331,19 @@ main {
     & .wendel {
       background-image: url(./assets/img/avatar.jpg);
     }
+
+    & .jeni {
+      background-image: url(./assets/img/avatar-jeni.jpg);
+    }
+
+    & .kezia {
+      background-image: url(./assets/img/avatar-kezia.jpg);
+    }
   }
+}
+
+.project-block:last-child {
+  border-bottom: unset;
 }
 
 .in-development::after {
@@ -340,6 +354,19 @@ main {
   padding: 0.1rem var(--spacing-01);
   border-radius: var(--radius-01);
   background-color: var(--yellow);
+  color: var(--dark-02);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.in-production::after {
+  content: "Finalizado";
+  position: absolute;
+  top: var(--spacing-03);
+  right: 0;
+  padding: 0.1rem var(--spacing-01);
+  border-radius: var(--radius-01);
+  background-color: var(--green);
   color: var(--dark-02);
   font-size: 0.75rem;
   font-weight: 600;
