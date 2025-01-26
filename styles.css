@@ -89,6 +89,40 @@ ul {
   line-height: var(--spacing-03);
 }
 
+a {
+  position: relative;
+  display: inline-block;
+  color: var(--purple);
+  text-align: center;
+  text-decoration: none;
+  font-size: var(--text-01);
+  transition: color 0.1s ease-out;
+}
+
+a:hover {
+  color: var(--pink);
+}
+
+a:not(.banner-link):after {
+  content: "";
+  position: absolute;
+  bottom: 0.13rem;
+  right: calc(-0.2rem - var(--text-01));
+  height: var(--text-01);
+  aspect-ratio: 1/1;
+  background-image: url(./assets/icons/external-link.svg);
+  background-size: contain;
+}
+
+small {
+  color: var(--light-03);
+  font-size: 0.75rem;
+
+  & * {
+    font-size: inherit;
+  }
+}
+
 main {
   width: 100%;
 }
@@ -279,29 +313,7 @@ main {
   }
 
   & a {
-    position: relative;
-    display: inline-block;
     margin-top: var(--spacing-03);
-    color: var(--purple);
-    text-align: center;
-    text-decoration: none;
-    font-size: var(--text-01);
-    transition: color 0.1s ease-out;
-  }
-
-  & a:hover {
-    color: var(--pink);
-  }
-
-  & a::after {
-    content: "";
-    position: absolute;
-    bottom: 0.13rem;
-    right: calc(-0.2rem - var(--text-01));
-    height: var(--text-01);
-    aspect-ratio: 1/1;
-    background-image: url(./assets/icons/external-link.svg);
-    background-size: contain;
   }
 
   & h6 {
@@ -370,4 +382,27 @@ main {
   color: var(--dark-02);
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+footer {
+  margin-top: var(--spacing-03);
+  padding-block: 3rem;
+  border-top: solid 2px var(--dark-03);
+  background-color: var(--dark-02);
+
+  & .wrapper > div {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-01);
+    margin-bottom: var(--spacing-01);
+
+    & img {
+      height: var(--text-03);
+    }
+
+    & h2 {
+      color: var(--dark-04);
+      font-size: var(--text-02);
+    }
+  }
 }
