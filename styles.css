@@ -111,7 +111,7 @@ a:hover {
   color: var(--pink);
 }
 
-a:not(.banner-link):after {
+a:not(.banner-link, .wendel, .jeni, .kezia):after {
   content: "";
   position: absolute;
   bottom: 0.13rem;
@@ -440,11 +440,9 @@ main {
     display: flex;
     align-items: center;
     gap: var(--spacing-01);
-    padding-top: var(--spacing-02);
-    padding-bottom: var(--spacing-03);
 
-    & div {
-      position: relative;
+    & a {
+      display: block;
       width: var(--title-04);
       aspect-ratio: 1/1;
       border: solid 2px var(--dark-03);
@@ -463,6 +461,10 @@ main {
     & .kezia {
       background-image: url(./assets/img/avatar-kezia.jpg);
     }
+  }
+
+  & .contributors-block:last-child {
+    padding-bottom: unset;
   }
 }
 
